@@ -16,7 +16,7 @@ jobs:
         with:
           root_file: cv.tex
       - name: Rename CV file
-        run: mv cv.pdf index.pdf
+        run: mv cv.pdf TrungTQT_CV_EN.pdf
 
       - name: Install pdf2htmlEX
         run: |
@@ -36,22 +36,14 @@ jobs:
         run: |
           sudo timedatectl set-timezone Asia/Ho_Chi_Minh
           sudo date -s "$(wget -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f5-8)Z"
-          echo "release_tag=CV_Build_$(date +"%Y.%m.%d")" >> $GITHUB_OUTPUT
+          echo "release_tag=CV_Build_EN_$(date +"%Y.%m.%d")" >> $GITHUB_OUTPUT
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ steps.tag.outputs.release_tag }}
           files: |
-            ./index.pdf
+            ./TrungTQT_CV_EN.pdf
 
-      # (Optional) - Publish to Cloudflare site
-      - name: Publish
-        uses: cloudflare/pages-action@v1
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: 'cv'
-          directory: 'out'
 permissions:
   contents: write
   pages: write
