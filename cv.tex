@@ -1,0 +1,199 @@
+%-------------------------
+% Resume in Latex
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage[super]{nth}
+\usepackage{booktabs}
+\usepackage{accsupp}
+\usepackage[utf8]{vietnam}
+\input{glyphtounicode}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\link}[2]{\href{#1}{\color{blue}\underline{#2}}}
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+  \item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textit{\small#1} & \textit{\small #2} \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \small#1 & #2 \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemSubListStart}{\begin{itemize}\setlength\itemsep{0.4em}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemSubListEnd}{\end{itemize}}
+
+\newcommand{\awardsTable}[1]{
+	\begin{tabularx}{\textwidth}{llllll}
+	\emph{Name}	& \emph{Placing}	& \emph{Type}	& \emph{Scope}	& \emph{Awarder}                 & \emph{Year}       \\
+	\midrule\midrule
+	#1
+	\end{tabularx}
+}
+\newcommand{\awardsTableRow}[6]{
+	\BeginAccSupp{method=plain, ActualText=11\string\t 21}#1 & #2 & #3 & #4 & #5 & #6\EndAccSupp{} \\
+}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{center}
+	\textbf{\huge \scshape Trần Quốc Trí Trung} \\ \vspace{3pt}
+	\small Email: \link{mailto:tritrungtq@gmail.com}{tritrungtq@gmail.com} $|$
+	Phone: 0335-241-708 $|$
+	LinkedIn: \link{https://www.linkedin.com/in/trungtqt/}{https://www.linkedin.com/in/trungtqt/}
+        
+\end{center}
+
+\section{Mục tiêu nghề nghiệp}
+Sinh viên năm ba ngành An toàn thông tin với mong muốn trở thành một Kỹ sư An toàn thông tin, làm việc trong mảng Ứng cứu sự cố. Với sự đam mê, tinh thần ham học hỏi và kiến thức về lĩnh vực An ninh mạng, tôi mong muốn được đóng góp vào việc phát triển các hệ thống bảo mật, bảo đảm an toàn thông tin cho người dân.
+
+\section{Học vấn}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Trường Công nghệ thông tin và Truyền thông - Đại học Bách khoa Hà Nội}{9/2022 -- 2026}
+{Chương trình tiên tiến - An toàn không gian số}{Hà Nội}
+
+\resumeItemListStart
+\resumeItem{\textbf{CPA: 2.7}}
+
+\resumeItem{Các hoạt động nổi bật:}
+
+\resumeItemSubListStart
+\resumeItem{Giải ba Chung khảo - Cuộc thi Sinh viên với An toàn thông tin ASEAN (ASCIS) 2023 }
+\resumeItem{Giải ba Chung khảo - Cuộc thi Sinh viên với An toàn thông tin ASEAN (ASCIS) 2024 }
+\resumeItemSubListEnd
+\resumeItemListEnd \resumeSubHeadingListEnd
+
+\section{Kinh nghiệm làm việc} \resumeSubHeadingListStart
+
+\resumeSubheading {Trung tâm Ứng cứu khẩn cấp không gian mạng Việt Nam (VNCERT/CC)}{10/2023 -- Present}
+{Thực tập sinh Ứng cứu sự cố}{Cầu Giấy, Hà Nội}
+\vspace{0.5pt}
+\resumeItemListStart
+\resumeItem{Có kinh nghiệm thực hiện đánh giá An toàn thông tin cho ứng dụng Web, hệ thống API dựa trên OWASP Top 10 và CWE.}
+\resumeItem{Có kinh nghiệm thực hiện đánh giá An toàn thông tin cho hạ tầng hệ thống, ứng dụng mobile.}
+\resumeItem{Tham gia phát triển các công cụ bảo mật nội bộ, checklist quy trình an toàn thông tin.}
+\resumeItem{Thực hiện giám sát và cập nhật các lỗ hổng bảo mật mới được công bố và các đoạn code khai thác được chia sẻ công khai, đồng thời thực hiện cảnh báo các sự cố lộ lọt dữ liệu người dùng cho các đối tác.}
+\resumeItem{Được tham gia vào quá trình ứng phó sự cố an toàn thông tin cho các địa phương và các doanh nghiệp tại Việt Nam.}
+\resumeItem{Được tham gia tổ chức các cuộc diễn tập ứng phó sự cố an toàn thông tin cấp địa phương/quốc gia/quốc tế cho các tổ chức tại Việt Nam.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Dự án cá nhân}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\link{https://github.com/teebow1e/loganalyz3r}{\textbf{LogAnalyz3r}} $|$ \emph{Java}}{}
+\resumeItemListStart
+\resumeItem{Công cụ phân tích và biểu diễn tập tin nhật ký dịch vụ, hướng tới các Web Server như Apache, NGINX hay hệ thống tường lửa iptables.} 
+\resumeItem{Là kết quả của học phần Project I được giảng dạy tại Trường Công nghệ thông tin và Truyền thông.
+}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+
+\section{Kỹ năng}
+\resumeItemListStart
+\resumeItem{\textbf{Ngôn ngữ lập trình}: Python $\cdot$ Go $\cdot$ JavaScript $\cdot$ Java}
+\resumeItemSubListStart
+\resumeItem{Có khả năng viết các đoạn mã script bằng Python, JavaScript một cách thuần thục, phục vụ quá trình kiểm thử, tấn công thâm nhập.}
+\resumeItem{Sở hữu hiểu biết về ngôn ngữ Go, có khả năng lập trình các công cụ hỗ trợ kiểm thử, web server với hiệu năng cao.}
+\resumeItemSubListEnd
+
+\resumeItem{\textbf{Các công cụ}: Git $\cdot$ Docker $\cdot$ Unix}
+\resumeItemSubListStart
+\resumeItem{Sở hữu hiểu biết về hệ điều hành Linux, có thể sử dụng giao diện dòng lệnh một cách thành thạo cho tất cả các tác vụ công việc yêu cầu.}
+\resumeItem{Có khả năng xây dựng, phát triển và triển khai các Docker container.}
+\resumeItemSubListEnd
+
+\resumeItem{\textbf{Khả năng ngôn ngữ}}
+\resumeItemSubListStart
+\resumeItem{\textbf{Tiếng Anh}: Chứng chỉ IELTS (8.0), được cấp bởi IDP vào tháng 11/2021}
+\resumeItemSubListEnd
+\resumeItemListEnd
+
+\end{document}
