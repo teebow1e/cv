@@ -28,7 +28,11 @@ jobs:
           sudo dpkg -i ./pdf2htmlEX.deb
 
       - name: Convert PDF to HTML
-        run: pdf2htmlEX --process-outline 1 --fallback 1 --bg-format svg --zoom 1.3 --process-type3 1 --dest-dir out TrungTQT_CV.pdf
+        run: |
+          pdf2htmlEX --process-outline 1 --fallback 1 --bg-format svg --zoom 1.3 --process-type3 1 --dest-dir out TrungTQT_CV.pdf
+          ls -lavh out/
+          mv out/TrungTQT_CV.html index.html
+          ls -lavh out/
       
       # (Optional) Create release
       - name: Generate release tag
